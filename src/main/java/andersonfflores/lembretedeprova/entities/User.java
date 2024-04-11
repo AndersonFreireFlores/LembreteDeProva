@@ -14,6 +14,7 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "tb_user")
 public class User {
 
     @Id
@@ -25,7 +26,6 @@ public class User {
     String email;
 
     @OneToMany
-    @JoinColumn(table = "lembrete")
     List<Lembrete> lembretes;
 
 }
