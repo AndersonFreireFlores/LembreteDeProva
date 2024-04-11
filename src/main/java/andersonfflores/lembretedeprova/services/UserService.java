@@ -32,6 +32,8 @@ public class UserService {
         if(userOptional.isPresent()){
             userOptional.get().setName(user.getName());
             userOptional.get().setEmail(user.getEmail());
+
+            return repository.save(userOptional.get());
         }
         return null;
     }
