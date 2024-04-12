@@ -37,4 +37,10 @@ public class Lembrete {
     LocalDate lembreteDate;
 
 
+    public static boolean dateVerifier(Lembrete lembrete){
+        if (lembrete.getLembreteDate().isEqual(LocalDate.now())){
+            return true;
+        }
+        return false;
+    }
 }
